@@ -28,3 +28,30 @@ document.querySelector("#activate-xray").addEventListener("click", function() {
     xrayHandlerFunction();
 })
 
+const allHandlerFunction = () => {
+    let powers = document.querySelectorAll("section");
+    powers.forEach(element => {
+        let classes = element.classList;
+        classes.remove("disabled");
+        classes.add("enabled");
+    
+    });
+}
+
+document.querySelector("#activate-all").addEventListener("click", function() {
+    allHandlerFunction();
+})
+
+const offHandlerFunction = () => {
+    let powers = document.querySelectorAll("section");
+    powers.forEach(element => {
+        let classes = element.classList;
+        classes.add("disabled");
+        classes.remove("enabled");
+    
+    });
+}
+
+document.querySelector("#deactivate-all").addEventListener("click", function() {
+    offHandlerFunction();
+})
